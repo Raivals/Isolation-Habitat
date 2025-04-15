@@ -1,0 +1,225 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* navbar */
+.navbar {
+    background-color: #00bdad;
+    display: flex;
+    gap: 10rem;
+    align-items: center;
+    padding: 1rem;
+    position: fixed; /* Positionnement fixe pour que la navbar soit toujours en haut */
+    top: 0; /* La navbar est collée en haut de l'écran */
+    left: 0; /* La navbar commence à partir du bord gauche */
+    right: 0; /* S'assure qu'elle couvre toute la largeur */
+    z-index: 1000; /* La navbar sera au-dessus des autres éléments */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ajouter une ombre sous la navbar pour la séparer du contenu */
+    width: 100%; /* S'assurer que la navbar occupe toute la largeur de l'écran */
+}
+
+.logo {
+    color: #fff;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 300px;
+    height: auto;
+}
+
+.avis{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.avis img{
+    width: 200px;
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    color: #1a2458;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.chevron {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin-left: 0.3rem;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #00bdad;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    border-radius: 6px;
+    min-width: 220px;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(5px);
+}
+
+.dropdown.show .dropdown-menu {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+    animation: fadeIn 0.3s ease;
+}
+
+.dropdown-menu li {
+    list-style: none;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 0.8rem 1.2rem;
+    text-decoration: none;
+    color: #1a2458;
+    background-color: transparent;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.dropdown.show .chevron {
+    transform: rotate(180deg);
+}
+
+
+/* hero */
+
+.hero {
+    padding: 2rem;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.cta-button {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    background-color: #1a2458;
+    font-weight: bold;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+    transform: translateY(-50%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #00bdad; 
+    color: #1a2458;
+}
+
+/* animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* footer */ 
+.footer {
+  background-color: #00bdad;
+  padding: 2rem 1rem;
+}
+
+.footer-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 300px;
+  height: auto;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-links li a {
+  color: #1a2458;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.footer-links li a i {
+  margin-right: 0.5rem; /* Espace entre l'icône et le texte */
+  font-size: 18px; /* Taille des icônes */
+}
+
+.footer-links li a:hover {
+  color: white
+}
+
+.footer-bottom {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1a2458;
+}
+
+.footer::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  margin-bottom: 1rem;
+}
