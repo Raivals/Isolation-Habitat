@@ -1,10 +1,15 @@
 main {
-  padding: 5rem 2rem 2rem 5rem;
+  padding: 5rem 2rem 1rem 3rem;
 }
 
 .product-title {
   color: #1a2458;
   font-size: 2rem;
+}
+
+.product-subtitle {
+  color:#1a2458;
+  font-size: 1.5rem;
 }
 
 .product-container {
@@ -13,12 +18,15 @@ main {
   /* align-items: center; */
 }
 
+/* slider */
+
 .slider {
   margin-left: 5rem;
   position: relative;
   overflow: hidden;
   max-width: 400px;
   border-radius: 8px;
+  padding-bottom: 2rem;
 }
 
 .slider-track {
@@ -54,3 +62,21 @@ main {
   right: 10px;
 }
 
+/* video */ 
+
+.video-container {
+  position: relative;
+  padding-bottom: 50%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin-right: 1rem;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 600px;
+}
